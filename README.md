@@ -21,6 +21,7 @@ Yanhu Shan<sup>2</sup>, Congpei Qiu<sup>1</sup>, Liang Gao<sup>1</sup>, Wei Ke<s
 
 <a href="#getting-started"><strong>Getting Started</strong></a> &nbsp;|&nbsp;
 <a href="#training"><strong>Training</strong></a> &nbsp;|&nbsp;
+<a href="#pretrained-model"><strong>Pretrained Model</strong></a> &nbsp;|&nbsp;
 <a href="#evaluation"><strong>Evaluation</strong></a> &nbsp;|&nbsp;
 <a href="#visualization"><strong>Visualization</strong></a> &nbsp;|&nbsp;
 <a href="#contact"><strong>Contact</strong></a>
@@ -134,6 +135,32 @@ bash scripts/train.sh lon --checkpoint work_dirs/spatial/last.pth
 The final checkpoint is `work_dirs/aligndrive/last.pth`. See [Training](doc/TRAINING.md).
 
 ### Evaluation
+
+#### Pretrained Model
+
+Evaluate our released model directly without running the three training stages.
+Complete the [installation](doc/INSTALL.md) and CARLA setup first, then download
+the [pretrained weights from Google Drive](https://drive.google.com/file/d/1Z91nzvlXuyzKPjxyViKjjfYOpq7RbU6t/view?usp=drive_link)
+and save the checkpoint as `ckpt/AlignDrive_SOTA_weights.pth`.
+Use the bundled [SOTA configuration](projects_sp/configs/inference/aligndrive_sota.py),
+which matches the released checkpoint; it differs from the default training architecture.
+
+From the repository root, with `CARLA_ROOT` set:
+
+```bash
+GPUS=2 bash scripts/evaluate.sh --checkpoint ckpt/AlignDrive_SOTA_weights.pth \
+  --config_path projects_sp/configs/inference/aligndrive_sota.py \
+  --project_name AlignDrive_SOTA --collision-mode fast
+python3 carla_tools/merge.py output/AlignDrive/AlignDrive_SOTA_full/result
+```
+
+This runs all 220 Bench2Drive routes. The released configuration enables closed-loop
+planning and strict checkpoint loading. `fast` is the collision calculation used
+for the paper's inference timing; switching to `shapely` can also change planning
+decisions and evaluation scores. See [pretrained evaluation](doc/EVALUATION.md#pretrained-model)
+for a single-route check and visualization.
+
+#### Evaluate Your Own Trained Model
 
 **1. Bench2Drive Simulation**
 
