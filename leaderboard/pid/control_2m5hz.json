@@ -1,0 +1,28 @@
+{
+    "turn_KP": 3.0,
+    "turn_KI": 0.0,
+    "turn_KD": 0.0,
+    "turn_KP_turn": 1.8,
+    "turn_KI_turn": 0.2,
+    "turn_KP_change_lane": 3.0,
+    "turn_KI_change_lane": 0.2,
+    "turn_n": 40,
+    "speed_KP": 5.0,
+    "speed_KI": 0.2,
+    "speed_KD": 1.0,
+    "speed_n": 40,
+    "frency": 5.0,
+    "max_throttle": 8,
+    "clip_delta": 5,
+    "control_waypoints_range": [0, 1],
+    "control_waypoints_range_stuck": [0, 1, 2, 3, 4],
+    "turn_goal_points": 0,
+    "turn_goal_points_turn": 4,
+    "brake_speed": 0.4,
+    "max_desired_speed": 10.0,
+    "no_steer_stop": false,
+    "extend_cmd": true,
+    "force_two_tp": true,
+    "refine_cmd":true
+}
+

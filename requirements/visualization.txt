@@ -1,0 +1,4 @@
+# Retained tool dependencies, not part of the observed training environment.
+seaborn==0.12.2
+laspy==2.5.0
+lazrs==0.5.3

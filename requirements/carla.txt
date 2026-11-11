@@ -1,0 +1,15 @@
+# Additional packages observed in the local Python 3.8 CARLA environment.
+# Install the CARLA 0.9.15 Python API separately from the simulator distribution.
+networkx==2.2
+py-trees==0.8.3
+simple_watchdog_timer==0.1.1
+transforms3d==0.4.2
+ephem==4.2
+dictor==0.1.12
+pydot==3.0.4
+easydict==1.13
+h5py==3.11.0
+xmlschema==1.0.18
+pexpect==4.9.0
+simplejson==3.19.2
+tabulate==0.9.0

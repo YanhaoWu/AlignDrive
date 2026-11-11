@@ -1,0 +1,12 @@
+{
+    "turn_KP": 1.5,
+    "turn_KI": 0.4,
+    "turn_KD": 0.3,
+    "turn_n": 40,
+    "speed_KP": 5.0,
+    "speed_KI": 0.5,
+    "speed_KD": 1.0,
+    "speed_n": 40,
+    "frency": 2.0
+}
+

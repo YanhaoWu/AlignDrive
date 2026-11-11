@@ -1,0 +1,90 @@
+{
+  "schema": "aligndrive.project_dependency_snapshot.v1",
+  "captured_on": "2026-11-03",
+  "scope": "Project-scoped observed packages; not a full pip freeze or a clean-install lockfile.",
+  "platform": "linux_x86_64",
+  "training": {
+    "environment": "sparsedrive",
+    "python": "3.8.0",
+    "packages": {
+      "addict": "2.4.0",
+      "cython": "0.29.36",
+      "einops": "0.8.0",
+      "flash-attn": "2.3.2",
+      "ipython": "8.12.3",
+      "llvmlite": "0.40.1",
+      "matplotlib": "3.5.2",
+      "mmcv-full": "1.7.1",
+      "mmdet": "2.28.2",
+      "ninja": "1.11.1.1",
+      "numba": "0.57.0",
+      "numpy": "1.23.5",
+      "omegaconf": "2.3.0",
+      "opencv-python": "4.8.1.78",
+      "packaging": "24.2",
+      "pandas": "1.1.5",
+      "pillow": "10.4.0",
+      "pip": "24.3.1",
+      "prettytable": "3.7.0",
+      "pycocotools": "2.0.7",
+      "pyquaternion": "0.9.9",
+      "pytest": "7.4.4",
+      "pytest-cov": "5.0.0",
+      "pyyaml": "6.0.1",
+      "requests": "2.32.3",
+      "scikit-learn": "1.3.0",
+      "scipy": "1.10.1",
+      "setuptools": "69.5.1",
+      "shapely": "2.0.0",
+      "six": "1.16.0",
+      "tensorboard": "2.14.0",
+      "terminaltables": "3.1.10",
+      "torch": "1.13.0+cu116",
+      "torchvision": "0.14.0+cu116",
+      "tqdm": "4.66.4",
+      "urllib3": "1.26.16",
+      "wheel": "0.43.0",
+      "yapf": "0.33.0"
+    }
+  },
+  "carla_additions": {
+    "environment": "sparsedrive_carla",
+    "python": "3.8.0",
+    "packages": {
+      "dictor": "0.1.12",
+      "easydict": "1.13",
+      "ephem": "4.2",
+      "h5py": "3.11.0",
+      "networkx": "2.2",
+      "pexpect": "4.9.0",
+      "py-trees": "0.8.3",
+      "pydot": "3.0.4",
+      "simple-watchdog-timer": "0.1.1",
+      "simplejson": "3.19.2",
+      "tabulate": "0.9.0",
+      "transforms3d": "0.4.2",
+      "xmlschema": "1.0.18"
+    }
+  },
+  "k8s_observations": {
+    "preinstalled_mmcv_full": "1.7.1",
+    "flash_attention_wheel": "flash_attn-2.3.2+cu116torch1.13cxx11abiFALSE-cp38-cp38-linux_x86_64.whl",
+    "extra_installs": [
+      "ninja",
+      "mpi4py",
+      "omegaconf",
+      "shapely==2.0.0"
+    ],
+    "mpi4py_version": null
+  },
+  "omissions": [
+    "Unrelated and private packages, local file URLs, editable paths, and credentials.",
+    "Unused torchaudio, including the observed ROCm build in the training environment.",
+    "Visualization dependencies retained from the previous requirements but not installed locally.",
+    "Legacy nuScenes SDK and its dedicated dependencies; Bench2Drive does not require them."
+  ],
+  "validation": {
+    "clean_install_verified": false,
+    "full_k8s_image_inventory_available": false
+  }
+}
